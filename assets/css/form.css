@@ -1,0 +1,93 @@
+@import url(global.css);
+body{
+    background-image: url("../images/background-movies-series.png");
+    background-size: cover;
+    height: 100vh;
+}
+.form{
+    margin: 50px 0 20px 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;    
+    background-repeat: none;
+    background-size: cover;
+}
+
+form{
+    width: 100%;
+    max-width: 800px;
+    background: var(--form-bg-color);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    border-radius: 10px;
+}
+form h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    margin: 0 0 24px;
+    letter-spacing: 1px;
+}
+form input{
+    padding: 16px;
+    outline: none;
+    border: var(--form-field-border);
+    border-radius: 10px;
+    background: var(--form-field-bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+form input::placeholder{
+    color: var(--form-field-placeholder);
+}
+form input:invalid{
+    border-color: var(--form-field-error);
+}
+form input:focus{
+    border-color: var(--form-field-border);
+}
+form .buttons{
+    margin-top: 24px;
+}
+.buttons a{
+    margin: 0 0 0 24px;
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: 800;
+}
+.buttons .button{
+    border: none;
+    background: none;
+    color: var(--text-color);
+}
+
+.buttons .button.gradient{
+    padding: 16px 40px;
+    background-color: var(--tertiary-color);
+    border-radius: 500px;
+    text-decoration: none;
+    border: none;
+    font-size: .8rem;
+    font-weight: 800;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background: var(--btn-bg-color-gradient);
+    background-size: 250%;
+}
+
+@media  screen and (max-width: 480px) {
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+    }
+
+    .buttons a{
+        align-self: center;
+        margin: 0;
+    }
+}

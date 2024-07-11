@@ -1,0 +1,551 @@
+@import url(global.css);
+@import url(style.css);
+
+.nav-menu{
+    width: 100%;
+    height: 54px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.nav-menu img{
+    width: 160px;
+    height: 26px;
+}
+
+.nav-menu div a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav-menu .item-menu{
+    margin: 0 24px 0 0;
+}
+.nav-menu .item-menu.menu-button{
+    background: var(--tertiary-color);
+    padding: 8px 24px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all .7s ease-in-out;
+}
+
+.nav-menu .item-menu.menu-button:hover{
+    background: var(--btn-link-bg-color);
+    color: var(--btn-link-color);
+}
+
+header{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 40px;
+    padding: 100px 0 300px;
+    position: relative;
+    background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite alternate;
+}
+  .header::after {
+    content: "";
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(0deg, var(--primary-color), transparent);
+  }
+header .channel-images{
+    display: flex;
+    column-gap: 24px;
+    row-gap: 24px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+header h1{
+    /* width: 510px; */
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+header h1 span{
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    font-size: 2rem;
+}
+header .divider{
+    background: var(--divider-bg-color);
+    width: 70%;
+    max-width: 700px;
+    height: 5px;
+}
+header .offer{
+    width: 210px;
+}
+header .offer p:not(.price){
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+}
+header .offer .price{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+header .offer .small-price{
+    font-size: 1rem;
+    font-weight: initial;
+}
+
+header .button{
+    padding: 16px 40px;
+    background-color: var(--tertiary-color);
+    background-origin: padding-box;
+    border-radius: 500px;
+    text-decoration: none;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    animation: wiggle 2.2s ease infinite;
+    cursor: pointer;
+}
+
+header .button-gradient{
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+    background-size: 250%;
+}
+header .button-gradient:hover{
+    background-color: transparent;
+    background-position: 100%;
+    outline: 3px solid var(--secondary-color);
+    transform: scale(1.05);
+}
+
+
+header .small-text{
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    width: 300px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+header::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(0deg, var(--primary-color), transparent);
+    bottom: 0;
+}
+
+/* section */
+
+.subscription{
+    scroll-margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-image: url("/assets/images/background-movies-series.png");
+    background-repeat: none;
+    background-size: cover;
+    padding: 24px 100px;
+    justify-content: space-around;
+}
+
+.subscription .card-box{
+    display: flex;
+    column-gap: 80px;
+    perspective: 2000px;
+    perspective-origin: top;
+    
+}
+.subscription  .title{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    max-width: 1252px;
+    min-width: 252px;
+    padding-bottom: 32px;
+}
+.card-box .subscription-card{
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+    padding: 40px 60px;
+    background: var(--card-bg-color);
+    border-radius: 10px;
+    position: relative;
+    justify-content: space-between ;
+    transition: all 1s ease-in-out;
+}
+
+.subscription-card .subscription-plan{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.subscription-plan .price{
+    font-size: 2rem;
+    color: var(--secondary-color);
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.subscription-plan .small-price{
+    font-size: 1rem;
+    color: #fff;
+    letter-spacing: initial;
+}
+
+.subscription-goals li{
+    margin: 0  0 14px;
+    padding: 0 0 0 14px;
+    font-size: 1.2rem;
+    list-style: none;
+}
+.subscription-goals li::marker{
+    content: "+";
+    font-size: 2rem;
+}
+
+.subscription-card  button{
+    background: var(--tertiary-color);
+    padding: 16px 24px;
+    border-radius: 16px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    font-weight: 800;
+}
+
+.subscription-card .button-gradient{
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: all .5s;
+    background-size: 250%;
+    cursor: pointer;
+}
+.subscription-card .button-gradient:hover{
+    background: transparent;
+    background-position: 100%;
+    outline: 2px solid var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.card-box:has(.subscription-card:nth-child(1):hover) .subscription-card:nth-child(2){
+    transform: rotateY(-45deg);
+}
+.card-box:has(.subscription-card:nth-child(2):hover) .subscription-card:nth-child(1){
+    transform: rotateY(45deg);
+}
+
+.content{
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    max-width: 1200px;
+}
+
+.content h2{
+    text-align: center;
+    font-size: 2rem;
+}
+.content .card{
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid transparent;
+    transition: transform 0.8s, background 0.8s, border 1s;
+}
+.content-card{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}   
+/* 
+.content-card .card{
+    height: 529px;
+    width: 353px;
+    transition: all .5s ease;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-position: center;
+    background-size: cover;
+} */
+
+.content-card .card img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 2s;
+}
+.content-card .card:hover{
+    transform: scale(1.1);
+    border: 2px solid var(--tertiary-color);
+}
+.content-card .card:hover img{
+    opacity: 0;
+}
+
+.content-card .card:nth-child(1):hover{
+    background-image: url(/assets/images/hbo-hover_0.webp);
+}
+
+.content-card .card:nth-child(2):hover {
+    background-image: url(/assets/images/MAX-Hover.webp);
+}
+
+.content-card .card:nth-child(3):hover {
+    background-image: url(/assets/images/DC-Hover.webp);
+}
+
+.content-card .card:nth-child(4):hover {
+    background-image: url(/assets/images/WB-Hover.webp);
+}
+
+.content-card .card:nth-child(5):hover {
+    background-image: url(/assets/images/CN-Hover.png);
+}
+
+.content-card .card:nth-child(6):hover {
+    background-image: url(/assets/images/UCL-Hover.webp);
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 2rem;
+}
+
+footer .text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.text .links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.text .links a{
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: all .5s ease;
+    font-weight: 700;
+    margin: 0 20px;
+}
+
+.text .links a:hover{
+    color: #fff;
+}
+
+.text p{
+    font-size: .8rem;
+    margin: 16px 0;
+    color: var(--link-color);
+}
+
+footer .icons{
+    margin: 80px 0 0 0;
+    display: flex;
+    gap: 40px;
+    align-self: center ;
+}
+
+@media screen and (max-width: 1200px) {
+    .card-box{
+        flex-direction: column;
+        row-gap: 80px;
+        align-items: center;
+        justify-content: center;
+        margin: 24px;
+    }
+    .subscription-card{
+        max-width: 600px;
+        min-width: 352px;
+    }
+}
+@media (pointer:coarse){
+    .card-box{
+        transform: none;
+    }
+    .card-box:has(.subscription-card:nth-child(1):hover) .subscription-card:nth-child(2),
+    .card-box:has(.subscription-card:nth-child(2):hover) .subscription-card:nth-child(1){
+        transform: none;
+    }
+}
+@media screen and (max-width: 800px) {
+    .content-card{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .subscription-plan .price{
+        font-size: 1.5rem;
+    }
+    .subscription-goals li{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 700px){
+    .subscription-card .subscription-plan{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+@media  screen and (max-width: 480px) {
+
+    header h1{
+        max-width: 400px;
+        min-width: 230px;
+    }
+    header{
+        margin: 128px 0 0;
+        padding: 100px 0 300px;
+    }
+    .subscription .title{
+        min-width: 430px;
+    }
+    .nav-menu{
+        justify-content: space-evenly;
+        display: flex;
+        flex-direction: column;
+        height: 128px;
+        padding: 0;
+    }
+    .nav-menu img{
+        width: 100px;
+        justify-self: center;
+        align-self: center;
+    }
+    .nav-menu div{
+        margin: 0 0 0 0;
+    }
+
+    .nav-menu div a{
+        font-size: .7rem;
+
+    } 
+    .nav-menu div .item-menu{
+        margin: 0 0 0 30px;
+    }
+    .nav-menu div .item-menu.menu-button{
+        margin: 0 0 0 10px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .text .links{
+        flex-direction: column;
+    }
+    .text .links a{
+        margin: 10px 0;
+    }
+
+    .content-card{
+        grid-template-columns: repeat(6, 100%);
+        grid-auto-flow: column;
+        overflow-x: scroll;
+    }
+    
+}
+@media screen and (max-width: 380px) {
+    .subscription-card{
+        min-width: 252px;
+    }
+
+    .subscription .title{
+        min-width: 320px;
+    }
+}
+    @media screen and (max-width: 300px) {
+        .subscription-card{
+            min-width: 252px;
+        }
+    
+        .subscription .title{
+            min-width: 220px;
+        }
+    
+}
+
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes wiggle{
+    0%, 10%{
+        transform: rotate(0);
+    }
+
+    15%{
+        transform: rotate(-15deg);
+    }
+
+    20%{
+        transform: rotate(10deg);
+    }
+
+    25%{
+        transform: rotate(-10deg);
+    }
+
+    30%{
+        transform: rotate(10deg);
+    }
+
+    35%{
+        transform: rotate(-10deg);
+    }
+
+    40%, 100%{
+        transform: rotate(0);
+    }
+}
+
+/* Form */
+
