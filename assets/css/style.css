@@ -312,27 +312,27 @@ header::after{
 }
 
 .content-card .card:nth-child(1):hover{
-    background-image: url(/assets/images/hbo-hover_0.webp);
+    background-image: url(assets/images/hbo-hover_0.webp);
 }
 
 .content-card .card:nth-child(2):hover {
-    background-image: url(/assets/images/MAX-Hover.webp);
+    background-image: url(assets/images/MAX-Hover.webp);
 }
 
 .content-card .card:nth-child(3):hover {
-    background-image: url(/assets/images/DC-Hover.webp);
+    background-image: url(assets/images/DC-Hover.webp);
 }
 
 .content-card .card:nth-child(4):hover {
-    background-image: url(/assets/images/WB-Hover.webp);
+    background-image: url(assets/images/WB-Hover.webp);
 }
 
 .content-card .card:nth-child(5):hover {
-    background-image: url(/assets/images/CN-Hover.png);
+    background-image: url(assets/images/CN-Hover.png);
 }
 
 .content-card .card:nth-child(6):hover {
-    background-image: url(/assets/images/UCL-Hover.webp);
+    background-image: url(assets/images/UCL-Hover.webp);
 }
 
 footer{
